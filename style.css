@@ -1,0 +1,164 @@
+:root {
+  --font-title: 'Sigmar One', cursive;
+  --font-base: 'Open Sans', sans-serif;
+
+  --primary: #254e70;
+  --secondary: #37718e;
+  --secondary-hover: #3087b2;
+  --accent: #e24663;
+  --accent-hover: #ff3258;
+  --border: #8ee3ef;
+  --bg: #d0e7ef;
+}
+
+/* page */
+
+.page {
+  font-family: var(--font-base);
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page__title {
+  font-family: var(--font-title);
+  font-size: 60px;
+  color: var(--secondary);
+  margin: 10px;
+}
+
+/* statistics */
+
+.statistics {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 30px;
+  border: solid 1px var(--border);
+  border-radius: 10px;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.statistics__winners {
+  margin-bottom: 20px;
+}
+
+.statistics__timer {
+  margin: 0;
+}
+
+.statistics__winners-header {
+  cursor: pointer;
+  outline: none;
+}
+
+.statistics__input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  color: var(--primary);
+}
+
+/* game */
+
+.game {
+  width: 100%;
+}
+
+/* box */
+
+.box {
+  box-sizing: border-box;
+  border: solid 20px var(--border);
+  border-radius: 10px;
+  display: grid;
+  grid: repeat(4, 1fr) / repeat(4, 1fr);
+  background-color: var(--bg);
+  gap: 2px;
+  padding: 2px;
+  user-select: none;
+}
+
+.game__box {
+  margin-bottom: 40px;
+}
+
+/* cell */
+
+.cell {
+  padding-bottom: 100%;
+  position: relative;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.cell_active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cell[id='0'] {
+  opacity: 0;
+  cursor: default;
+}
+
+.cell__num {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-title);
+  font-size: 62px;
+  color: var(--accent);
+  border: solid 2px var(--border);
+  border-radius: 20px;
+}
+
+.cell_active:hover .cell__num {
+  border-color: var(--secondary-hover);
+}
+
+/* buttons */
+
+.button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  font-family: var(--font-base);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 26px;
+  border-color: transparent;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--secondary-hover);
+}
+
+.button_type_reset {
+  background-color: var(--accent);
+}
+
+.button_type_reset:hover {
+  background-color: var(--accent-hover);
+}
+
+.game__controls {
+  display: flex;
+  justify-content: space-around;
+}

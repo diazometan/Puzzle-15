@@ -1,0 +1,16 @@
+{
+  "name": "puzzle15",
+  "version": "1.0.0",
+  "description": "Practice task for Q&A-6 @Yandex.Praktikum",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx eslint --ext .js ."
+  },
+  "author": "Andrey Vershinin",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

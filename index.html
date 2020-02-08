@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puzzle 15</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Sigmar+One&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+</head>
+
+<body>
+    <main class="page">
+
+        <h1 class="page__title">Puzzle 15</h1>
+
+        <section class="statistics">
+            <details class="statistics__winners">
+                <summary class="statistics__winners-header">Winners:</summary>
+                <ol class="statistics__winners-list">
+                </ol>
+
+            </details>
+            <form action="statistics__form" name="new">
+                <input type="text" name="name" class="statistics__input" placeholder="Имя игрока">
+            </form>
+            <p class="statistics__name">Player: <span class="statistics__player-name">00:00</span></p>
+            <p class="statistics__timer">Time: <span class="statistics__timer-value">00:00</span></p>
+        </section>
+
+        <section class="game">
+
+            <div class="box game__box"></div>
+
+            <div class="game__controls">
+                <button class="button button_type_reset">Reset</button>
+                <button class="button button_type_start">Start</button>
+            </div>
+        </section>
+
+        <template data-component="cell">
+            <div id="1" class="cell">
+                <div class="cell__num">1</div>
+            </div>
+        </template>
+
+        <template data-component="statistics__winners-item">
+            <li class="statistics__winners-item">
+                Stephen Hawking - 0.99 sec
+            </li>
+        </template>
+
+        <script src="./moment.js"></script>
+        <script src="./index.js"></script>
+    </main>
+</body>
+
+</html>
